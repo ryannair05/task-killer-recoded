@@ -1,0 +1,46 @@
+// Dedicated to Ryan Nair.
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int hMenu()
+{
+	system("cls");
+	// TODO
+
+	return 0;
+}
+
+int main()
+{
+	string input;
+	string command;
+	char yn = 'Y';
+
+	while (yn == 'Y')
+	{
+		system("cls");
+		cout << "Welcome to TaskKillerRecoded!\n";
+		cout << "(C) Twizzlestorm LLC / Ethan Custer [2019]\n\n";
+		cout << "Please enter a task to kill (ex. chrome.exe), or type \"help\" for help: ";
+		cin >> input;
+
+		if (input == "help")
+			hMenu();
+
+		command = "taskkill /f /im " + input;
+
+		system(command.c_str());
+
+		cout << "The programs specified have been killed. If there was an error, it's likely you've typed the program wrong.";
+
+		cout << "\nWould you like to run the program again? (Y/N): ";
+		cin >> yn;
+
+	}
+
+		system("pause >nul");
+		return 0;
+
+}
