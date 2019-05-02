@@ -18,7 +18,7 @@ int main()
 	string command;
 	char yn = 'Y';
 
-	while (yn == 'Y')
+	while (yn == 'Y' || yn == 'y')
 	{
 		system("cls");
 		cout << "Welcome to TaskKillerRecoded!\n";
@@ -35,12 +35,10 @@ int main()
 
 		cout << "The programs specified have been killed. If there was an error, it's likely you've typed the program wrong.";
 
-		cout << "\nWould you like to run the program again? (Y/N): ";
+		cout << "\nWould you like to run the program again?(Y/N): ";
 		cin >> yn;
 
 	}
-
-		system("pause >nul");
-		return 0;
+	return 0;
 
 }
